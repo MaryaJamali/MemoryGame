@@ -95,4 +95,22 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetBoard() {
         [firstCard, secondCard, lockBoard] = [null, null, false];
     }
+    function resetGame() {
+        cards = [];
+        gameContainer.innerHTML = '';
+        messageElement.style.display = 'none';
+        restartButton.style.display = 'none';
+    }
+
+    document.getElementById('easy').addEventListener('click', () => createCards('easy'));
+    document.getElementById('medium').addEventListener('click', () => createCards('medium'));
+    document.getElementById('hard').addEventListener('click', () => createCards('hard'));
+    restartButton.addEventListener('click', () => {
+        levelSelection.style.display = 'block';
+        resetGame();
+    });
+
+    function checkWin() {
+        return cards.every(card => card.classList.contains('matched'));
+    }
 }
