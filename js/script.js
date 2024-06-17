@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let secondCard = null;
     let lockBoard = false;
     let gameLevel = '';
-     function createCards(level) {
+
+    function createCards(level) {
         gameLevel = level;
         resetGame();
         const difficulty = getDifficulty(level);
@@ -38,7 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         levelSelection.style.display = 'none';
     }
-        function getDifficulty(level) {
+
+    function getDifficulty(level) {
         switch (level) {
             case 'easy':
                 return 6;
@@ -50,7 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 return 6;
         }
     }
-        function flipCard(card) {
+
+    function flipCard(card) {
         if (lockBoard) return;
         if (card === firstCard) return;
 
@@ -66,7 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         checkForMatch();
     }
-        function checkForMatch() {
+
+    function checkForMatch() {
         const isMatch = firstCard.dataset.image === secondCard.dataset.image;
         isMatch ? disableCards() : unflipCards();
     }
@@ -84,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500);
         }
     }
+
     function unflipCards() {
         setTimeout(() => {
             firstCard.classList.remove('flipped');
@@ -95,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetBoard() {
         [firstCard, secondCard, lockBoard] = [null, null, false];
     }
+
     function resetGame() {
         cards = [];
         gameContainer.innerHTML = '';
@@ -113,4 +119,4 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkWin() {
         return cards.every(card => card.classList.contains('matched'));
     }
-}
+});
