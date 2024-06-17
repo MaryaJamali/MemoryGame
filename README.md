@@ -4,11 +4,10 @@ In this game, a number of cards are arranged in a grid face to face. Each card h
 The aim of the game is for the player to find matching pairs of cards by clicking on the cards.
 
  ## instructions:
-1. Simulate your repository:``` git clone https://github.com/MaryaJamali/MemoryGame.git```
+1. Simulate your repository : ``` git clone https://github.com/MaryaJamali/MemoryGame.git```
 2. Run the program
 
 ## How to play:
-🌟Select the game level:
 <h4> 1. The player can choose between three levels </h4> Each level has a different number of cards :<br> 1. Easy🥰12 cards (6 pairs) 2. Medium😝16 cards (8 pairs) 3. Hard😡20 cards (10 pairs)<br>
 <h4> 2. Start the game </h4> Cards are displayed face down. The player has to click on the cards to see their image.<br>
 <h4> 3. Find pairs </h4> The player must try to find matching pairs. If two selected cards are the same, they are known as a pair and remain face up. Otherwise, the cards are turned over again.<br>
