@@ -15,4 +15,27 @@ document.addEventListener('DOMContentLoaded', () => {
     let secondCard = null;
     let lockBoard = false;
     let gameLevel = '';
+     function createCards(level) {
+        gameLevel = level;
+        resetGame();
+        const difficulty = getDifficulty(level);
+        const doubledImages = [...images.slice(0, difficulty), ...images.slice(0, difficulty)];
+        doubledImages.sort(() => 0.5 - Math.random());
+
+        doubledImages.forEach((image, index) => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.dataset.image = image;
+
+            const img = document.createElement('img');
+            img.src = image;
+            card.appendChild(img);
+
+            card.addEventListener('click', () => flipCard(card));
+            cards.push(card);
+            gameContainer.appendChild(card);
+        });
+
+        levelSelection.style.display = 'none';
+    }
 }
