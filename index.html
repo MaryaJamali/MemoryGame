@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    
+    <div class="container">
+        <div id="game-container"></div>
+        <div id="sidebar">
+            <h2>Game information</h2>
+            <ul id="game-info">
+                <p id="description">
+                    Welcome to the memory game! This is a simple and fun game that helps
+                    improve your memory and concentration.
+                </p>
+                <h2>Select the game level</h2>
+                <span id="cards-info">
+                    Easy : 12 cards (6 pairs)
+                    Medium : 16 cards (8 pairs)
+                    Hard : 20 cards (10 pairs)
+                </span>
+                </p>
+            </ul>
+            <div id="level-selection" class="button-container">
+                <button id="easy">easy</button>
+                <button id="medium">medium</button>
+                <button id="hard">hard</button>
+            </div>
+            <div id="message"></div>
+            <button id="restart">Restart</button>
+            <p>Manufacturer information</p>
+            <ul id="creator-info">
+                <li>GitHub: <a href="https://github.com/MaryaJamali">Miss Jamali</a></li>
+                <li><a href="mailto:m.jamali16@yahoo.com">m.jamali16@yahoo.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
