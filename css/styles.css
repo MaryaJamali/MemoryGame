@@ -153,3 +153,15 @@ button:active {
     justify-content: center;
     gap: 4px;
 }
+
+#message {
+    font-size: 24px;
+    font-weight: bold;
+    color: #c4c4c4;
+    display: none;
+}
+
+#restart {
+    margin-top: 20px;
+    display: none;
+}
