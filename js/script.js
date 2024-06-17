@@ -38,4 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         levelSelection.style.display = 'none';
     }
+        function getDifficulty(level) {
+        switch (level) {
+            case 'easy':
+                return 6;
+            case 'medium':
+                return 8;
+            case 'hard':
+                return 10;
+            default:
+                return 6;
+        }
+    }
 }
