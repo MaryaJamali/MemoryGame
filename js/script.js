@@ -66,4 +66,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         checkForMatch();
     }
+        function checkForMatch() {
+        const isMatch = firstCard.dataset.image === secondCard.dataset.image;
+        isMatch ? disableCards() : unflipCards();
+    }
+
+    function disableCards() {
+        firstCard.classList.add('matched');
+        secondCard.classList.add('matched');
+        resetBoard();
+
+        if (checkWin()) {
+            setTimeout(() => {
+                messageElement.innerText = 'congratulations! you win';
+                messageElement.style.display = 'block';
+                restartButton.style.display = 'block';
+            }, 500);
+        }
+    }
 }
